@@ -9,7 +9,7 @@ Ph.D. candidate with a strong background in cell and molecular biology, bioinfor
 
 ## Research Interests
 - Genome-Wide Association Studies (GWAS)
-- Genomic Prediction & Trait Modeling
+- Genomic Prediction (GP)
 - Stress Tolerance in Crops (Salinity, Heat, Bolting)
 - Candidate Gene Identification & SNP Annotation
 - Computational Genomics & Reproducible Research
@@ -58,7 +58,7 @@ Master’s Degree in Cytology and Histology (Honors)
 King Abdulaziz University  
 
 Bachelor’s Degree in Biology, Minor in Education (Honors)  
-Umm Al Qura University  
+King Abdulaziz University
 
 ---
 

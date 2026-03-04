@@ -1,9 +1,15 @@
-#! /usr/bin/ env python3
+#!/usr/bin/env python3
 
-print ('hello world')
+# prompt the user for their name
+name = input("Please enter your name: ")
 
-# say  'hello world'
+# two ways to print hello world
+print("hello world")
+print('hello world')
 
-# print greeting with hello 
+# print personalized greeting, using the name from input() above
+print("hello,", name, "I hope you have a great day.")
 
-print ('hello, name')
+# some math
+print(7+7*9)
+print((7+7)*9)

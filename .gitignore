@@ -1,0 +1,13 @@
+bio_project/
+
+/cv.md
+/lists-template.ipynb
+/README.md
+/write_slurm.py
+
+scripts/scripts/
+
+.Rhistory
+__pycache__/
+*.out
+*.blastn

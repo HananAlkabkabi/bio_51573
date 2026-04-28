@@ -34,27 +34,34 @@ def read_gff(gff_file, genome_sequence):
     # create list to store results (id, sequence)
     features = []
 
-    # open gff file
-    with open(gff_file, "r") as gff:
+  # open gff file
+with open(gff_file, "r") as gff:
+    
+    # read file line by line
+    for line in gff:
 
-        # read file line by line
-        for line in gff:
+        # remove newline
+        line = line.strip()
 
-            # remove newline
-            line = line.strip()
+        # ignore empty lines
+        if not line or line.startswith("#"):
+            continue
 
-            # split line into columns (tab-separated)
-            columns = line.split("\t")
+        # split line into columns (tab-separated)
+        columns = line.split("\t")
 
-            # get start (col 4) and end (col 5)
-            start = int(columns[3])
-            end = int(columns[4])
+        if len(columns) < 9:
+            continue
 
-            # extract DNA sequence (python is 0-based)
-            sequence = genome_sequence[start-1:end]
+        # get start (col 4) and end (col 5)
+        start = int(columns[3])
+        end = int(columns[4])
 
-            # get last column (info column)
-            info = columns[8]
+        # extract DNA sequence (python is 0-based)
+        sequence = genome_sequence[start-1:end]
+
+        # get last column (info column)
+        info = columns[8]
 
             # extract ID after "ID="
             seq_id = info.split("ID=")[1]
@@ -94,10 +101,10 @@ def write_output(features):
 def main():
 
     # read the fasta file
-    genome = read_fasta("covid.fasta")
+    genome = read_fasta("fasta")
 
     # read the gff file
-    features = read_gff("covid.gff3", genome)
+    features = read_gff("gff3", genome)
 
     # write the output
     write_output(features)

@@ -26,7 +26,7 @@ def main():
 
     genome_sequence = gff_functions.read_fasta(args.fasta_file)
 
-    # read gff file → get features (id + sequence)
+    # read gff file  (id + sequence)
     features = gff_functions.read_gff(args.gff_file, genome_sequence)
 
     # write output file
